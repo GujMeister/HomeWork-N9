@@ -50,7 +50,10 @@ class SuperHero: SuperBeing {
         self.equipment = equipment
         self.vehicle = vehicle
     }
-    
+}
+
+// მეთოდები მათი შესრულებილი საქმისამებრ ექსთენშენში გავიტანე, კოდის წაკითხულობის მიზნით
+extension SuperHero {
     func rescue(personNamed: String) {
         print("\(name) არ შეუშინდა სახიფათო სიტუაციას და \(personNamed) გადაარჩინა სიკვდილს")
     }
@@ -63,7 +66,6 @@ class SuperHero: SuperBeing {
 // 8. გაუწერეთ SuperVillain კლასს დამატებითი პარამეტრები evilScheme: String, obsession: String, rivalry: String
 // 9. გაუწერეთ SuperVillain კლასს მეთოდი - attack - რომელიც პარამეტრად მიიღებს Superhero-ს და დაბეჭდავს - “ბოროტმ. სახელი” გეგმავს თავდასხმას და მთელი ქალაქის მიწასთან გასწორებას, საეჭვოა “სუპერგმირის სახელი” მის შეჩერებას თუ შეძლებს” (მაგ: “ჯოკერი” გეგმავს თავდასხმას და მთელი ქალაქის მიწასთან გასწორებას, საეჭვოა “ბეტმენი” მის შეჩერებას თუ შეძლებს)
 // 10. გაუწერეთ SuperVillain კლასს მეთოდი experimentation - რომელიც პარამეტრად მიიღებს სტრინგს (subject) და დაბეჭდავს - “‘ბოროტმოქმედის სახელი’ ექსპერიმენტებს ატარებს დაუცველ მოქალაქებზე, მისი მსხვერპლი ამჟამად ‘მსხვერპლის სახელი’ აღმოჩნდა” (მაგ: “ჯოკერი” ექსპერიმენტებს ატარებს დაუცველ მოქალაქებზე, მისი მსხვერპლი ამჟამად “გელა” აღმოჩნდა)
-
 
 class SuperVillain: SuperBeing {
     var name: String
@@ -87,7 +89,9 @@ class SuperVillain: SuperBeing {
         self.rivalry = rivalry
         self.favouriteSaying = favouriteSaying
     }
-    
+}
+
+extension SuperVillain {
     func attack(superHero: SuperHero) {
         print("\(name) გეგმავს თავდასხმას და მთელი ქალაქის მიწასთან გასწორებას, საეჭვოა \(superHero.name) მის შეჩერებას თუ შეძლებს")
     }
